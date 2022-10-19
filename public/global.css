@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+	/* font-family: 'Open Sans', sans-serif; */
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Inter', Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	/* font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Arial, sans-serif; */
+	--font-mono: 'Fira Mono', monospace;
+	--pure-white: #ffffff;
+	--primary-color: #b9c6d2;
+	--secondary-color: #d0dde9;
+	--tertiary-color: #edf0f8;
+	--accent-color: rgb(61, 138, 232);
+	--heading-color: rgba(0, 0, 0, 0.7);
+	--text-color: #444444;
+	--background-without-opacity: rgba(255, 255, 255, 0.7);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+}
+
+body {
+	margin: 0;
+}
+
+p {
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--heading-color);
+	margin: 0;
+}
+
+a {
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+/* ensures the increment/decrement arrows always display */
+/* input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	opacity: 1;
+} */
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}

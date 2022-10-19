@@ -1,0 +1,39 @@
+<script lang="ts">
+  import { shopOriginUrl } from "../../../stores"
+
+  export let itemTitle: string
+  export let productUrl: string = "/"
+
+  $: itemHref = $shopOriginUrl + productUrl
+
+  $: itemTitleDisplay =
+    itemTitle.length < 40 ? itemTitle : `${itemTitle.slice(0, 40)}...`
+</script>
+
+<div class="item-title">
+  <a href={itemHref} title={itemTitle} target="_blank">{itemTitleDisplay} </a>
+</div>
+
+<style lang="scss">
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .item-title {
+    font-size: small;
+    cursor: pointer;
+    font-weight: 600;
+    padding-bottom: 1px;
+    // border-bottom: 1px solid white;
+  }
+
+  .item-title:hover {
+    // border-bottom: 1px solid gray;
+    cursor: pointer;
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+</style>
